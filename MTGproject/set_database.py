@@ -8,6 +8,7 @@ from mtgsdk import Changelog
 import pyrebase
 from datetime import datetime
 def collectCard():
+	keywords = ["Surveil", "enters", "dies", "Flash","Defender",  ]
 	listy = []
 	cards = Card.where(set='ktk').where(subtypes='warrior,human').all()
 	for card in cards:
