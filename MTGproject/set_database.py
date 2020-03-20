@@ -22,21 +22,21 @@ def collectCard():
 		toughness = card.toughness
 		cmc = card.cmc
 		colourIdentit = card.color_identity
+
 		print(colourIdentit)
 def addToDatabase():
 	config = {
 	  "apiKey": " AIzaSyAThe5ILc3TGvV_rIxHKxbZfQfMTtdj1jQ ",
 	  "authDomain": "deckcreator-d2ddf.firebaseapp.com",
-	  "databaseURL": "https://my-application-a29f5.firebaseio.com/",
+	  "databaseURL": "https://deckcreator-d2ddf.firebaseio.com",
 	  "storageBucket": "deckcreator-d2ddf.appspot.com",
-	  "serviceAccount": "/home/conner/Documents/clubhub-270013-9a21263094f2.json" #Not putting on github
+	  "serviceAccount": "/home/conner/Documents/deckcreator-d2ddf-6ce726e6fa03.json" #/home/ethan/Documents/QuarantineProject/deckcreator-d2ddf-6ce726e6fa03.json"
 	}
-	todaysDate = datetime.now()
 	firebase = pyrebase.initialize_app(config)
 	auth = firebase.auth()
 	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "") ##Not putting on github
 	db = firebase.database()
-	listOfActive = db.child("deckcreator-d2ddf").get(user['idToken']).val()
+	listOfActive = db.child("Colors").child("Blue").child("Arty").get(user['idToken']).val()
 	print(listOfActive)
 def main():
 
