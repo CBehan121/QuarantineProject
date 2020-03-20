@@ -34,7 +34,7 @@ def addToDatabase():
 	}
 	firebase = pyrebase.initialize_app(config)
 	auth = firebase.auth()
-	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "") ##Not putting on github
+	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "12345678") ##Not putting on github
 	db = firebase.database()
 	listOfActive = db.child("Colors").child("Blue").child("Arty").get(user['idToken']).val()
 	print(listOfActive)
