@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Make a Magic Deck</title>
+        <title>Choose Commander</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,16 +15,23 @@
     </head>
 
     <body>
-        <div class = "pickcom">
 
-            <button class="pickCommander" onclick="pickCom()">Pick Commander</button>
+        <button class="goStart" onclick="goStart()">Go Back to Start</button>
+
+        <div class = "">
+
+            <form>
+                <button class = "mono" onclick="goMono()"> Mono </button>
+                <button class = "2Colour" onclick="go2Colour()"> 2 Colour </button>
+                <button class = "3Colour" onclick="go3Colour()"> 3 Colour </button>
+                <button class = "45Colour" onclick="go45Colour()"> 4/5 Colour </button>
+            </form>
 
         </div>
 
         <div class = "footer">
 
         </div>
-
 
     </body>
 
