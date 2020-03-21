@@ -74,22 +74,22 @@ def main():
 	config = {
 	  "apiKey": " AIzaSyAThe5ILc3TGvV_rIxHKxbZfQfMTtdj1jQ ",
 	  "authDomain": "deckcreator-d2ddf.firebaseapp.com",
-	  "databaseURL": "https://deckcreator-d2ddf.firebaseio.com",
+	  "databaseURL": "https://deckcreator-d2ddf.firebaseio.com",	
 	  "storageBucket": "deckcreator-d2ddf.appspot.com",
 	  "serviceAccount": "/home/conner/Documents/deckcreator-d2ddf-6ce726e6fa03.json" #/home/ethan/Documents/QuarantineProject/deckcreator-d2ddf-6ce726e6fa03.json"
 	}
 	firebase = pyrebase.initialize_app(config)
 	auth = firebase.auth()
-	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "")
+	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "12345678")
 	sets = open("setCodes.txt", "r")
 	line = sets.readlines()
 	db = firebase.database()
 	print(len(line))
 	##41 - 53 is complete
-	firstbunch = line[0:40]
-	secondbunch = line[54:94]
-	thirdbunch = line[95:135]
-	fourthbunch = line[136:176]
+	firstbunch = line[177:220]
+	secondbunch = line[221:250]
+	thirdbunch = line[251:280]
+	fourthbunch = line[281:310]
 
 	p1 = Process(target=collectCard, args=(firstbunch,user, db, auth,  ))
 	p2 = Process(target=collectCard, args=(secondbunch,user, db, auth,  ))

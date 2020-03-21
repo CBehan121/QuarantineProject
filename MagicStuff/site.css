@@ -9,3 +9,12 @@
 	background-color: white;
 	font-size: 24px; 
 }
+.att{
+	text-align: center;
+	justify-content: center;
+	vertical-align: middle;
+}
+img {
+	max-width: 300px;
+	max-height: 300px;
+  }
