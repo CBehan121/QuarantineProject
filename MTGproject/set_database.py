@@ -80,7 +80,7 @@ def main():
 	}
 	firebase = pyrebase.initialize_app(config)
 	auth = firebase.auth()
-	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "12345678")
+	user = auth.sign_in_with_email_and_password("connerbehan1@gmail.com", "")
 	sets = open("setCodes.txt", "r")
 	line = sets.readlines()
 	db = firebase.database()
